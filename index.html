@@ -16,7 +16,30 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header></header>
+    <header class="header">
+  <div class="header-container">
+    <nav>
+      <a class="header-logo" href="#">
+        <svg class="logo-icon" width="16" height="16">
+          <use href="./img/icons.svg#icon-logo-icon"></use>
+        </svg>
+        <svg class="logo-title" width="148" height="12">
+          <use href="./img/icons.svg#icon-GreenHarvest"></use>
+        </svg>
+      </a>
+      <button
+        type="button"
+        class="btn-open-menu"
+        data-menu-button
+        aria-expanded="false"
+        aria-controls="mob-menu">
+        <svg class="mob-btn" width="32" height="32">
+          <use href="./img/icons.svg#icon-menu-burger-small"></use>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
     <main>
         <section class="hero">
             <div class="container hero-container">
