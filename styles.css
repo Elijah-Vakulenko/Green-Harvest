@@ -37,7 +37,7 @@ img {
 /* ~~~~~GENERAL~~~~~~ */
 
 body {
-  color: #fbfbfb;
+  /* color: #fbfbfb; */
   font-family: "Inter tight", sans-serif;
   font-size: 14px;
   line-height: 1.28;
@@ -73,7 +73,7 @@ header {
   background-color: #7a3145;
 }
 
-/* ---CONTAINER--- */
+/* container */
 
 .header-container {
   margin: 0 auto;
@@ -103,15 +103,17 @@ header {
   }
 }
 
-/* ---LOGO--- */
+/* logo */
 
 .header-logo {
   color: #fbfbfb;
 }
 
-.header-logo:focus,
-.header-logo:hover {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+.logo-icon:focus,
+.logo-icon:hover,
+.logo-title:focus,
+.logo-title:hover {
+  filter: brightness(150%);
 }
 
 /* ---BUTTONS--- */
