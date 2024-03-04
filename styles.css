@@ -72,7 +72,7 @@ body {
 
 /* BACKDROP */
 
-/* .backdrop {
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -93,10 +93,15 @@ body {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-} */
+}
 
 header {
-  background-color: #576f35;
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  padding-top: 32px;
+  box-sizing: border-box;
+  z-index: 1000;
 }
 
 /* container */
