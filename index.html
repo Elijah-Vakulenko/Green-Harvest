@@ -16,31 +16,72 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+
+    <!-- ===HEADER=== -->
+
     <header class="header">
-  <div class="header-container">
-    <nav>
-      <a class="header-logo" href="#">
-        <svg class="logo-icon" width="16" height="16">
-          <use href="./img/icons.svg#logo"></use>
-        </svg>
-        <svg class="logo-title" width="148" height="12">
-          <use href="./img/icons.svg#GreenHarvest"></use>
-        </svg>
-      </a>
-      <button
-        type="button"
-        class="btn-open-menu"
-        data-menu-button
-        aria-expanded="false"
-        aria-controls="mob-menu">
-        <svg class="mob-btn" width="32" height="32">
-          <use href="./img/icons.svg#mob-btn"></use>
-        </svg>
-      </button>
-    </nav>
-  </div>
-</header>
+    <div class="header-container">
+        <nav class="navigation">
+            <a class="header-logo" href="#">
+                <svg class="logo-icon" width="16" height="16">
+                    <use href="./img/icons.svg#logo"></use>
+                </svg>
+                <svg class="logo-title" width="148" height="12">
+                    <use href="./img/icons.svg#GreenHarvest"></use>
+                </svg>
+            </a>
+            <button
+                type="button"
+                class="open-menu-btn"
+                data-menu-button
+                aria-expanded="false"
+                aria-controls="mob-menu">
+        [+]<svg class="mob-btn" width="32" height="32">
+                    <use href="./img/icons.svg#mob-btn"></use>
+                </svg>
+            </button>
+        </nav>
+    </div>
+    <div class="backdrop is-hidden" data-backdrop>
+        <div class="mob-menu is-open" data-menu id="mob-menu">
+            <div class="close-btn-box">
+                <button
+                type="button"
+                class="close-menu-btn is-open"
+                data-menu-button
+                aria-expanded="false"
+                aria-controls="mob-menu">
+                [-]<svg width="32" height="32" aria-label="menu switcher">
+                  <use
+                    class="menu-cross"
+                    href="./img/icons.svg#mob-cross"></use>
+                </svg>
+              </button>
+            </div>
+             <nav class="mob-navigation">
+                <ul class="mob-menu-list">
+                  <li>
+                    <a class="mob-link current" href="">How It Works</a>
+                  </li>
+                  <li>
+                    <a class="mob-link" href="">Vegetables</a>
+                  </li>
+                  <li>
+                    <a class="mob-link" href="">Reviews</a>
+                  </li>
+                </ul>
+              </nav>
+            <div class="shop-btn-box">
+                <button class="shop-now-btn">shop now</button>
+            </div>
+        </div>
+    </div>
+    </header>
+
     <main>
+
+        <!-- ===HERO=== -->
+
         <section class="hero">
             <div class="container hero-container">
                 <div class="hero-text">
