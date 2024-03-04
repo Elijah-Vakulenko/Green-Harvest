@@ -118,14 +118,22 @@ header {
 }
 
 .header-logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   fill: #fbfbfb;
+  height: 16px;
+  width: 168px;
+  transition: transform 0.3s ease;
 }
 
-.logo-icon:focus,
-.logo-icon:hover,
-.logo-title:focus,
-.logo-title:hover {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.header-logo:hover,
+.header-logo:focus {
+  transform: scale(1.2);
+}
+
+.desktop-menu {
+  display: none;
 }
 
 .open-menu-btn {
@@ -251,6 +259,11 @@ header {
 }
 
 @media screen and (min-width: 768px) {
+  .header-logo {
+    height: 18px;
+    width: 194px;
+  }
+
   .open-menu-btn {
     width: 40px;
     height: 40px;
@@ -279,6 +292,65 @@ header {
 }
 
 /* ===Desktop Menu=== */
+@media screen and (min-width: 1280px) {
+  .open-menu-btn {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .desktop-navigation {
+    display: flex;
+    gap: 8px;
+  }
+
+  .desktop-link {
+    background-color: transparent;
+    color: #fbfbfb;
+    border: 1px solid rgba(251, 251, 251, 0.4);
+    border-radius: 12px;
+    padding: 12px;
+    width: 114px;
+    height: 44px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+
+  .desktop-link:hover,
+  .desktop-link:focus {
+    color: #622133;
+    background-color: #fbfbfb;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .desktop-shop-now-btn {
+    color: #fbfbfb;
+    border: none;
+    background-color: #7a3145;
+    border-radius: 30px;
+    padding: 16px;
+    width: 157px;
+    height: 52px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.11;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+
+  .desktop-shop-now-btn:hover,
+  .desktop-shop-now-btn:focus {
+    background-color: #622133;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
 
 /* BACKDROP */
 
