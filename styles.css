@@ -305,6 +305,7 @@ header {
 }
 
 /* ===Desktop Menu=== */
+
 @media screen and (min-width: 1280px) {
   .open-menu-btn {
     display: none;
@@ -391,11 +392,13 @@ header {
 }
 
 /* ~~~~~HERO~~~~~ */
+
 .hero {
   background-color: #576f35;
 }
 
 .hero-container {
+  background-color: #576f35;
   height: 812px;
   background-repeat: no-repeat;
   background-image: linear-gradient(
@@ -547,6 +550,10 @@ header {
 }
 
 /* ~~~~~HOW IT WORKS~~~~~ */
+
+.how-it-works {
+  background-color: #576f35;
+}
 
 .visually-hidden {
   position: absolute;
@@ -744,7 +751,6 @@ header {
   .hiw-container {
     display: flex;
     justify-content: center;
-    background-color: #576f35;
   }
 
   .left-section {
@@ -762,4 +768,34 @@ header {
     padding: 100px 100px 160px 100px;
     background-color: #576f35;
   }
+}
+
+/* ===DISCOUNT=== */
+
+.discount {
+  background-color: #fbfbfb;
+}
+
+/* ===ORGANIC VEGETABLES=== */
+
+.organic-vegetables {
+  background-color: #7a3145;
+}
+
+/* ===REVIEWS=== */
+
+.reviews {
+  background-color: #fbfbfb;
+}
+
+/* ===YOUR ORDER=== */
+
+.your-order {
+  background-color: #7a3145;
+}
+
+/* ===FOOTER=== */
+
+.footer {
+  background-color: #7a3145;
 }
