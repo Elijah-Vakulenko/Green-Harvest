@@ -42,7 +42,7 @@
                 <li><a class="desktop-link" href="#vegetables">Vegetables</a></li>
                 <li><a class="desktop-link" href="#reviews">Reviews</a></li>
               </ul>
-              <button type="button" class="desktop-shop-now-btn">Shop Now</button>
+              <button type="button" data-open-modal class="desktop-shop-now-btn">Shop Now</button>
             </div>
             <button
                 type="button"
@@ -59,7 +59,19 @@
 
     <!-- ===MODAL WINDOW SHOP NOW=== -->
 
-
+    <div class="backdrop-modal is-hidden" data-backdrop>
+      <div class="modal-window">
+        <button data-close-modal type="button" class="modal-btn">
+          <svg class="menu-cross" width="24" height="24">
+            <use href="./img/icons.svg#icon-censel"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Place your <span>order now!</span></p>
+        <form class="modal-form">
+          <input type="text">
+        </form>
+      </div>
+    </div>
 
     <!-- BACKDROP -->
 
@@ -257,5 +269,6 @@
       </footer>
 
     <script src="./menu.js"></script>
+    <script src="./modal.js"></script>
   </body>
 </html>
