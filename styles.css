@@ -953,6 +953,7 @@ header {
 
 .ov-description {
   margin-bottom: 40px;
+  max-width: 335px;
 }
 
 .ov-card {
@@ -1026,6 +1027,7 @@ header {
     margin-bottom: 50px;
     font-size: 16px;
     line-height: 1.25;
+    max-width: 626px;
   }
 
   .ov-list {
