@@ -93,6 +93,18 @@ h2 span {
   }
 }
 
+.container-extra {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .container-extra {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
 /* ~~~~~HEADER~~~~~ */
 
 header {
@@ -658,6 +670,11 @@ header {
   padding: 12px 25px 12px 24px;
   height: 76px;
   margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hiw-item:hover {
+  transform: scale(1.2);
 }
 
 .hiw-item-text {
@@ -696,7 +713,7 @@ header {
 }
 
 .hiw-item-text:hover::before {
-  transform: scale(1.2);
+  transform: scale(1.6);
 }
 
 .hiw-item:last-child {
