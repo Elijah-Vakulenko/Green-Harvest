@@ -1,4 +1,8 @@
 /* ~~~~~RESET~~~~~ */
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -38,6 +42,7 @@ img {
 /* ~~~~~GENERAL~~~~~~ */
 
 body {
+  color: #fbfbfb;
   font-family: "Inter tight", sans-serif;
   font-size: 14px;
   line-height: 1.28;
@@ -45,11 +50,16 @@ body {
 }
 
 h2 {
+  color: #fbfbfb;
   font-weight: 600;
   font-size: 48px;
   line-height: 1.04;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+}
+
+h2 span {
+  color: rgba(251, 251, 251, 0.3);
 }
 
 .container {
@@ -72,12 +82,14 @@ h2 {
 
   .container {
     max-width: 768px;
+    padding: 0 32px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
+    padding: 0 100px;
   }
 }
 
@@ -391,6 +403,8 @@ header {
   pointer-events: auto;
 }
 
+/* MODAL WINDOW - SHOP NOW */
+
 /* ~~~~~HERO~~~~~ */
 
 .hero {
@@ -678,6 +692,11 @@ header {
   background-color: #7a3145;
   font-size: 20px;
   font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.hiw-item-text:hover::before {
+  transform: scale(1.2);
 }
 
 .hiw-item:last-child {
@@ -782,10 +801,96 @@ header {
   background-color: #7a3145;
 }
 
+.ov-title {
+}
+
+.ov-list {
+}
+
+.ov-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fbfbfb;
+  border-radius: 40px;
+  padding: 32px 26px;
+}
+
+.ov-card:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.ov-item-title {
+  color: #7a3145;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.item-price {
+  color: #141414;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.item-img {
+  transition: transform 0.3s ease;
+}
+
+.item-img:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+  .ov-description {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .ov-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 28px;
+  }
+
+  .ov-card {
+    width: calc((100% - 40px) / 2);
+  }
+
+  .ov-card:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .ov-item-title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .ov-list {
+    column-gap: 21px;
+  }
+
+  .ov-card {
+    width: calc((100% - 42px) / 3);
+  }
+}
 /* ===REVIEWS=== */
 
 .reviews {
   background-color: #fbfbfb;
+}
+
+.reviews-title {
+  color: #141414;
+}
+
+.reviews-title span {
+  color: #576f35;
 }
 
 /* ===YOUR ORDER=== */
@@ -798,4 +903,13 @@ header {
 
 .footer {
   background-color: #7a3145;
+}
+
+@media screen and (min-width: 375px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1280px) {
 }
