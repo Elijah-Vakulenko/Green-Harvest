@@ -63,13 +63,19 @@
       
       <div class="modal-window">
         <button data-close-modal type="button" class="modal-btn">
-          <svg class="menu-cross" width="24" height="24">
+          <svg class="menu-cross" width="32" height="32">
             <use href="./img/icons.svg#icon-censel"></use>
           </svg>
         </button>
         <p class="modal-title">Place your <span>order now!</span></p>
         <form class="modal-form">
-          <input type="text">
+          <label>
+            <input class="form-name" type="text" placeholder="Full name"></label>
+          <label> 
+            <input class="form-email" type="email" placeholder="Email"></label>
+          <label>
+            <textarea class="form-comment" name="" id="" cols="30" rows="10" placeholder="Comment"></textarea>
+          </label>
         </form>
       </div>
     </div>
@@ -201,7 +207,7 @@
                 <h3 class="ov-item-title">eggplant</h3>
                 <p class="item-price">60 Uah / Kg</p>
                 <img class="item-img" src="./img/desct-veg-1-1x.png" alt="eggplant">
-                <p class="ov-card-overlay">Raw eggplant can have a bitter taste, with an astringent quality, but it becomes tender when cooked and develops a rich, complex flavor. Due to its texture and bulk, it is sometimes used as a meat substitute in vegan and vegetarian cuisines.</p>
+                <p class="ov-card-overlay">Raw eggplant can have a bitter taste, but it becomes tender when cooked and develops a rich, complex flavor. Due to its texture and bulk, it is sometimes used as a meat substitute in vegan and vegetarian cuisines.</p>
               </li>
               <li class="ov-card">
                 <h3 class="ov-item-title">leek</h3>
@@ -213,7 +219,7 @@
                 <h3 class="ov-item-title">mushrooms</h3>
                 <p class="item-price">40 Uah / Kg</p>
                 <img class="item-img" src="./img/desct-veg-3-1x.png" alt="mushrooms">
-                <p class="ov-card-overlay">In a 100-gram serving, raw white mushrooms provide 93 kilojoules of food energy and are an excellent source of the B vitamins, riboflavin, niacin, and pantothenic acid. Fresh mushrooms are also a good source of the dietary minerals, phosphorus and potassium.</p>
+                <p class="ov-card-overlay">Raw white mushrooms are an excellent source of the B vitamins, riboflavin, niacin, and pantothenic acid. Fresh mushrooms are also a good source of the dietary minerals, phosphorus and potassium.</p>
               </li>
               <li class="ov-card">
                 <h3 class="ov-item-title">corn</h3>
@@ -242,6 +248,30 @@
         <section class="reviews" id="reviews">
           <div class="container container-extra">
             <h2 class="reviews-title">Reviews from Our <span>Customers</span></h2>
+            <p class="review-description">Words of our customers: impressions and opinions about the quality of our services and the freshness of our products.</p>
+            <ul class="reviews-list">
+              <li class="reviewer-card">
+                <picture>
+                  <source media="" srcset="">
+                  <img src="./img/John-Wax-1x.png" alt="customer John"></picture>
+                <h3 class="reviewer-name">John Wax</h3>
+                <p class="review-comment">These vegetables are my secret to delicious and healthy meals. The quality is always at the highest level, the aroma and taste are enchanting. I advise every fan of real products!</p>
+              </li>
+              <li class="reviewer-card">
+                <picture>
+                  <source media="" srcset="">
+                  <img src="./img/Victoria-1x.png" alt="customer Victoria"></picture>
+                <h3 class="reviewer-name">Victoria Romashenko</h3>
+                <p class="review-comment">I love how fast and fresh the vegetables are delivered. Salads always turn out so appetizing, and soups are real masterpieces. The quality is impeccable!</p>
+              </li>
+              <li class="reviewer-card">
+                <picture>
+                  <source media="" srcset="">
+                  <img src="./img/Ihor-1x.png" alt="customer Ihor"></picture>
+                <h3 class="reviewer-name">Ihor Trachuk</h3>
+                <p class="review-comment">Recently tried my fresh tomatoes and peppers - amazing! The authenticity of the taste, as if from the garden directly to my table. It is now my main vegetable supplier.</p>
+              </li>
+            </ul>
           </div>
         </section>
 

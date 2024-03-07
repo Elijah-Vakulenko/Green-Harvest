@@ -56,6 +56,7 @@ h2 {
   line-height: 1.04;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 h2 span {
@@ -78,6 +79,7 @@ h2 span {
   h2 {
     font-size: 64px;
     line-height: 1;
+    margin-bottom: 50px;
   }
 
   .container {
@@ -90,6 +92,10 @@ h2 span {
   .container {
     max-width: 1280px;
     padding: 0 100px;
+  }
+
+  h2 {
+    margin-bottom: 25px;
   }
 }
 
@@ -424,7 +430,7 @@ header {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  min-width: 300px;
   border-radius: 4px;
   padding: 80px 20px 20px 20px;
   background-color: #622133;
@@ -439,11 +445,10 @@ header {
   right: 24px;
   display: flex;
   padding: 0;
-  border: 0.5px solid rgba(0, 0, 0, 0.1);
-  background-color: #d5bfc5;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  border: none;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
   margin: 0 auto;
   align-items: center;
   justify-content: center;
@@ -465,6 +470,20 @@ header {
 }
 
 .modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-name,
+.form-email,
+.form-comment {
+  border: 1px solid rgba(20, 20, 20, 0.2);
+  border-radius: 30px;
+  padding: 16px 16px 16px 16px;
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .backdrop-modal {
@@ -948,7 +967,6 @@ header {
 
 .ov-title {
   max-width: 335px;
-  margin-bottom: 20px;
 }
 
 .ov-description {
@@ -1002,6 +1020,7 @@ header {
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: #622133;
+  opacity: 0.8;
   background-color: #d5bfc5;
   padding: 100px 26px 26px 26px;
   position: absolute;
@@ -1020,7 +1039,6 @@ header {
 @media screen and (min-width: 768px) {
   .ov-title {
     width: 508px;
-    margin-bottom: 50px;
   }
 
   .ov-description {
@@ -1051,10 +1069,6 @@ header {
 }
 
 @media screen and (min-width: 1280px) {
-  .ov-title {
-    margin-bottom: 25px;
-  }
-
   .ov-list {
     column-gap: 21px;
   }
@@ -1076,6 +1090,89 @@ header {
 
 .reviews-title span {
   color: #576f35;
+}
+
+.review-description {
+  color: #141414;
+  margin-bottom: 40px;
+}
+
+.reviewer-card {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(122, 49, 69, 0.3);
+  border-radius: 24px;
+  padding: 20px 16px 38px;
+  max-width: 335px;
+  min-width: 298px;
+}
+
+.reviewer-card:first-child {
+  display: flex;
+}
+
+.reviewer-name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #040306;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+.review-comment {
+  color: rgba(4, 3, 6, 0.4);
+  text-align: center;
+  max-width: 288px;
+}
+
+@media screen and (min-width: 768px) {
+  .reviews-title,
+  .review-description {
+    max-width: 553px;
+  }
+
+  .review-description {
+    margin-bottom: 50px;
+  }
+
+  .reviews-list {
+    display: flex;
+    gap: 18px;
+  }
+
+  .reviewer-card {
+    padding: 20px 20px 42px;
+    width: calc((100% - 18px) / 2);
+  }
+
+  .reviewer-card:nth-child(2) {
+    display: flex;
+  }
+
+  .reviewer-name {
+    font-size: 18px;
+    line-height: 1.1;
+  }
+
+  .review-comment {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .reviews-list {
+    gap: 25px;
+  }
+
+  .reviewer-card {
+    display: flex;
+    padding: 20px;
+    width: calc((100% - 50px) / 3);
+  }
 }
 
 /* ===YOUR ORDER=== */
