@@ -256,7 +256,8 @@ header {
   width: 115px;
   height: 42px;
 }
-.current {
+.current,
+.pink {
   color: #7a3145;
   background-color: #fbfbfb;
 }
@@ -926,6 +927,18 @@ header {
   line-height: 1.04;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+  animation: fadeInLeft 2s ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .offer span {
@@ -941,6 +954,18 @@ header {
   .offer {
     font-size: 64px;
     line-height: 1.09;
+    animation: bounceIn 2s ease-out forwards;
+  }
+
+  @keyframes bounceIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .offer span {
@@ -952,6 +977,18 @@ header {
   .offer {
     font-size: 76px;
     line-height: 1.05263;
+    animation: zoomIn 2s ease-out forwards;
+  }
+
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .offer span {
@@ -1016,7 +1053,7 @@ header {
 
 .ov-card-overlay {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: #622133;
@@ -1066,6 +1103,10 @@ header {
   .ov-item-title {
     font-size: 32px;
   }
+
+  .ov-card-overlay {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -1075,6 +1116,10 @@ header {
 
   .ov-card {
     width: calc((100% - 42px) / 3);
+  }
+
+  .ov-card-overlay {
+    font-size: 24px;
   }
 }
 
@@ -1088,7 +1133,8 @@ header {
   color: #141414;
 }
 
-.reviews-title span {
+.reviews-title span,
+.green {
   color: #576f35;
 }
 
@@ -1179,6 +1225,193 @@ header {
 
 .your-order {
   background-color: #7a3145;
+}
+
+.your-order-title {
+  margin-bottom: 29px;
+}
+
+.order-description {
+  margin-bottom: 40px;
+}
+.form-card {
+  background-color: #fbfbfb;
+  padding: 40px 20px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.form-subtitle {
+  color: #141414;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.08333;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  border: 1px solid rgba(20, 20, 20, 0.2);
+  border-radius: 30px;
+  padding: 14px;
+  width: 295px;
+  height: 46px;
+  margin-bottom: 15px;
+}
+
+.input-field::placeholder,
+.textarea::placeholder {
+  color: #141414;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+}
+.textarea {
+  border: 1px solid rgba(20, 20, 20, 0.2);
+  border-radius: 15px;
+  padding: 14px;
+  width: 295px;
+  height: 90px;
+  margin-bottom: 25px;
+}
+
+.form-button {
+  border-radius: 30px;
+  padding: 16px 129px;
+  width: 295px;
+  height: 50px;
+  border: none;
+  background-color: #576f35;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fbfbfb;
+}
+
+.soc-networks {
+  background-color: #576f35;
+  border-radius: 30px;
+  padding: 40px 20px;
+}
+.form-img {
+  border-radius: 15px;
+  width: 295px;
+  height: 273px;
+  background-image: url(./img/squeezing-1x.jpg);
+  object-fit: cover;
+  object-position: top right;
+  margin-bottom: 20px;
+}
+
+.network-invitation {
+  font-weight: 600;
+  color: rgba(251, 251, 251, 0.5);
+  margin-bottom: 14px;
+}
+
+.soc-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.soc-link {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.08333;
+  letter-spacing: -0.01em;
+  transition: transform 0.3s ease;
+}
+
+.soc-link:hover,
+.soc-link:focus {
+  transform: scale(1.2);
+}
+
+.soc-link-list li:not(:last-child) a::after {
+  content: "•";
+  margin-left: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .your-order-title {
+    margin-bottom: 25px;
+  }
+
+  .order-description {
+    font-size: 16px;
+    line-height: 1.25;
+    max-width: 640px;
+    margin-bottom: 50px;
+  }
+
+  .order-cards {
+    max-width: 628px;
+    margin: 0 auto;
+  }
+
+  .form-card {
+    padding: 50px 100px;
+  }
+
+  .form-subtitle {
+    margin-bottom: 50px;
+  }
+
+  .input-field,
+  .textarea,
+  .form-button {
+    width: 428px;
+  }
+
+  .soc-networks {
+    padding: 50px;
+  }
+
+  .form-img {
+    width: 528px;
+    height: 273px;
+  }
+
+  .network-invitation {
+    font-size: 18px;
+    line-height: 1.11111;
+  }
+
+  .soc-link {
+    font-size: 32px;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .order-description {
+    max-width: 742px;
+  }
+
+  .order-cards {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  .form-card {
+    padding: 50px;
+    margin-bottom: 0;
+  }
+
+  .form-img {
+    width: 427px;
+    height: 273px;
+  }
 }
 
 /* ===FOOTER=== */
