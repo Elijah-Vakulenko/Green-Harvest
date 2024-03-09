@@ -1273,6 +1273,16 @@ header {
   line-height: 1.28571;
   letter-spacing: -0.02em;
 }
+
+input:valid {
+  border: 1px solid #3CBC81;
+
+}
+
+input:invalid {
+  border: 1px solid #E74A3B;
+}
+
 .textarea {
   border: 1px solid rgba(20, 20, 20, 0.2);
   border-radius: 15px;

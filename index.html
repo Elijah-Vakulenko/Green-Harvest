@@ -286,13 +286,13 @@
                 <h3 class="form-subtitle">Ordering <span class="pink">from us</span> is quick and easy! Fill out <span class="green">the form</span> below and we will contact you !</h3>
                 <form class="form">
                   <label for="">
-                    <input class="input-field" placeholder="Full Name" type="text">
+                    <input class="input-field" placeholder="Full Name" type="text" required>
                   </label>
                   <label for="">
-                    <input class="input-field" placeholder="Email" type="text">
+                    <input class="input-field" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" type="email" required>
                   </label>
                   <label for="">
-                    <textarea class="textarea" placeholder="Comment" name="" id="" cols="30" rows="10"></textarea>
+                    <textarea class="textarea" placeholder="Comment" required name="" id="" cols="30" rows="10"></textarea>
                   </label>
                   <button class="form-button" type="submit">Send</button>
                 </form>
@@ -301,9 +301,9 @@
                 <div class="form-img"></div>
                 <p class="network-invitation">Follow us on our social networks:</p>
                 <ul class="soc-link-list">
-                  <li><a class="soc-link" type="_blank" href="https://www.instagram.com/">instagram</a></li>
-                  <li><a class="soc-link" type="_blank" href="https://www.facebook.com/">facebook</a></li>
-                  <li><a class="soc-link" type="_blank" href="https://www.youtube.com/">youtube</a></li>
+                  <li><a class="soc-link" target="_blank" href="https://www.instagram.com/">instagram</a></li>
+                  <li><a class="soc-link" target="_blank" href="https://www.facebook.com/">facebook</a></li>
+                  <li><a class="soc-link" target="_blank" href="https://www.youtube.com/">youtube</a></li>
                 </ul>
               </div>
             </div>
