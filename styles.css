@@ -391,7 +391,9 @@ header {
   }
 
   .desktop-shop-now-btn:hover,
-  .desktop-shop-now-btn:focus {
+  .desktop-shop-now-btn:focus,
+  .form-button:hover,
+  .form-button:focus {
     background-color: #622133;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -476,9 +478,7 @@ header {
   gap: 15px;
 }
 
-.form-name,
-.form-email,
-.form-comment {
+.modal-input {
   border: 1px solid rgba(20, 20, 20, 0.2);
   border-radius: 30px;
   padding: 16px 16px 16px 16px;
@@ -817,6 +817,7 @@ header {
 .hiw-item-text:hover::before {
   transform: scale(1.6);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #622133;
 }
 
 .hiw-item:last-child {
@@ -1267,11 +1268,47 @@ header {
   margin-bottom: 15px;
 }
 
+.val::after {
+  display: none;
+  content: "Success!";
+  color: #3cbc81;
+  margin-top: -15px;
+  margin-left: 25px;
+}
+
+.input-field:valid + .val::after {
+  display: block;
+}
+
+/* .input-field:invalid + .inval::after {
+  display: block;
+}
+
+.input-field:invalid + .inval-mail::after {
+  display: block;
+}
+
+.inval::after {
+  display: none;
+  content: "Try again! Type your full name!";
+  color: #e74a3b;
+  margin-top: -15px;
+  margin-left: 25px;
+}
+
+.inval-mail::after {
+  display: none;
+  content: "Try again! Wrong email format!";
+  color: #e74a3b;
+  margin-top: -15px;
+  margin-left: 25px;
+} */
+
 .input-field:hover,
 .input-field:focus,
-.input-field:focus-visible,
-.textarea {
-  border: 1px solid #7a3145;
+.textarea:hover,
+.textarea:focus {
+  border: 2px solid #7a3145;
 }
 
 .input-field::placeholder,
@@ -1283,13 +1320,12 @@ header {
   letter-spacing: -0.02em;
 }
 
-.input-field:valid::after {
-  content: "Succes";
-  border: 1px solid #3cbc81;
+.input-field:not(:placeholder-shown):valid {
+  border: 2px solid #3cbc81;
 }
 
-.input-field:invalid {
-  border: 1px solid #e74a3b;
+.input-field:not(:placeholder-shown):invalid {
+  border: 2px solid #e74a3b;
 }
 
 .textarea {
@@ -1307,11 +1343,19 @@ header {
   width: 100%;
   height: 50px;
   border: none;
-  background-color: #576f35;
+  background-color: #7a3145;
   font-weight: 600;
   text-transform: uppercase;
   color: #fbfbfb;
 }
+
+/* .form-button span {
+  transition: transform 0.3s ease;
+}
+
+.form-button span:hover {
+  transform: scale(1.6);
+} */
 
 .soc-networks {
   background-color: #576f35;
@@ -1347,11 +1391,6 @@ header {
   line-height: 1.08333;
   letter-spacing: -0.01em;
   transition: transform 0.3s ease;
-}
-
-.soc-link:hover,
-.soc-link:focus {
-  transform: scale(1.2);
 }
 
 .soc-link-list li:not(:last-child) a::after {
@@ -1465,9 +1504,12 @@ header {
 }
 
 .footer-navigation li a:hover,
-.footer-navigation li a:focus {
-  transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
+.footer-navigation li a:focus,
+.soc-link:hover,
+.soc-link:focus,
+.contacts li a:hover,
+.contacts li a:focus {
+  text-decoration: underline;
 }
 
 .contacts {

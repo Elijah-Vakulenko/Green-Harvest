@@ -70,12 +70,17 @@
         <p class="modal-title">Place your <span>order now!</span></p>
         <form class="modal-form">
           <label>
-            <input class="form-name" type="text" placeholder="Full name"></label>
+            <input class="modal-input" type="text" required placeholder="Full name"></label>
           <label> 
-            <input class="form-email" type="email" placeholder="Email"></label>
-          <label>
-            <textarea class="form-comment" name="" id="" cols="30" rows="10" placeholder="Comment"></textarea>
+            <input class="modal-input" type="email" required placeholder="Email"></label>
+          <label> 
+            <input class="modal-input" type="text" required placeholder="Address"></label>
+          <label> 
+            <input class="modal-input" type="text" required placeholder="Choose your item"></label>
+            <label>
+            <textarea class="modal-input" name="" id="" cols="30" rows="10" placeholder="Comment"></textarea>
           </label>
+          <button class="shop-now-btn shop-btn-box" type="submit">Order now</button>
         </form>
       </div>
     </div>
@@ -142,16 +147,16 @@
 
         <section class="how-it-works">
           <div class="hiw-container">
-            <h2 class="visually-hidden" id="how-it-works">How it works</h2>
+            <h2 class="visually-hidden">How it works</h2>
             <div class="left-section">
               <picture class="image-container">
                 <source srcset="./img/person-1x.jpg 1x, ./img/person-2x.jpg 2x" />
                 <img src="./img/person-1x.jpg" alt="Woman chopping an apple" />
               </picture>
             </div>
-            <div class="right-section">
+            <div class="right-section" id="how-it-works">
               <div class="hiw-text-area">
-                <p class="hiw-subtitle">
+                <p class="hiw-subtitle" >
                   To order your <span>vegetable</span> basket, simply follow these
                   <span>easy steps</span>
                 </p>
@@ -206,37 +211,37 @@
               <li class="ov-card">
                 <h3 class="ov-item-title">eggplant</h3>
                 <p class="item-price">60 Uah / Kg</p>
-                <img class="item-img" src="./img/desct-veg-1-1x.png" alt="eggplant">
+                <picture><source/><img class="item-img" src="./img/desct-veg-1-1x.png" alt="eggplant" /></picture>
                 <p class="ov-card-overlay">Raw eggplant can have a bitter taste, but it becomes tender when cooked and develops a rich, complex flavor. Due to its texture and bulk, it is sometimes used as a meat substitute in vegan and vegetarian cuisines.</p>
               </li>
               <li class="ov-card">
                 <h3 class="ov-item-title">leek</h3>
                 <p class="item-price">50 Uah / Kg</p>
-                <img class="item-img" src="./img/desct-veg-2-1x.png" alt="leek">
+                <picture><source/><img class="item-img" src="./img/desct-veg-2-1x.png" alt="leek" /></picture>
                 <p class="ov-card-overlay">Leeks have a mild, onion-like taste. In its raw state, the vegetable is crunchy and firm. Raw leeks can be used in salads, doing especially well when they are the prime ingredient.</p>
               </li>
               <li class="ov-card">
                 <h3 class="ov-item-title">mushrooms</h3>
                 <p class="item-price">40 Uah / Kg</p>
-                <img class="item-img" src="./img/desct-veg-3-1x.png" alt="mushrooms">
+                <picture><source/><img class="item-img" src="./img/desct-veg-3-1x.png" alt="mushrooms" /></picture>
                 <p class="ov-card-overlay">Raw white mushrooms are an excellent source of the B vitamins, riboflavin, niacin, and pantothenic acid. Fresh mushrooms are also a good source of the dietary minerals, phosphorus and potassium.</p>
               </li>
               <li class="ov-card">
                 <h3 class="ov-item-title">corn</h3>
                 <p class="item-price">60 Uah / Kg</p>
-                <img class="item-img" src="./img/desct-veg-4-1x.png" alt="corn">
+                <picture><source/><img class="item-img" src="./img/desct-veg-4-1x.png" alt="corn" /></picture>
                 <p class="ov-card-overlay">Corn is used to make a wide variety of dishes including Mexican tortillas and tamales, Italian polenta, and American hominy grits.</p>
               </li>
               <li class="ov-card">
                 <h3 class="ov-item-title">sweet potatoes</h3>
                 <p class="item-price">50 Uah / Kg</p>
-                <img class="item-img" src="./img/desct-veg-5-1x.png" alt="sweet potatoes">
+                <picture><source/><img class="item-img" src="./img/desct-veg-5-1x.png" alt="sweet potatoes" /></picture>
                 <p class="ov-card-overlay">It is a traditional fall dish, boiled or roasted.</p>
               </li>
               <li class="ov-card">
                 <h3 class="ov-item-title">carrot</h3>
                 <p class="item-price">40 Uah / Kg</p>
-                <img class="item-img" src="./img/desct-veg-6-1x.png" alt="carrot">
+                <picture><source/><img class="item-img" src="./img/desct-veg-6-1x.png" alt="carrot" /></picture>
                 <p class="ov-card-overlay">The sweetness of carrots allows the vegetable to be used in some fruit-like roles. Grated carrots are used in carrot cakes, as well as carrot puddings.</p>
               </li>
             </ul>
@@ -285,16 +290,19 @@
               <div class="form-card">
                 <h3 class="form-subtitle">Ordering <span class="pink">from us</span> is quick and easy! Fill out <span class="green">the form</span> below and we will contact you !</h3>
                 <form class="form">
-                  <label>
-                    <input class="input-field" pattern="[A-Z][a-z]+( [A-Z][a-z]+){1,2}" placeholder="Full Name" type="text" required>
+                  <label for="name">
+                    <input id="name" class="input-field" pattern="[A-Z][a-zA-Z]{1,}( [A-Z][a-zA-Z]{1,}){1,2}" placeholder="Full Name" type="text" required>
+                  <span class="val"></span>
+                  <span class="inval"></span>
                   </label>
-                  <label>
-                    <input class="input-field" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" type="email" required>
+                  <label for="email">
+                    <input id="email" class="input-field" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" type="email" required>
+                    <span class="val"></span>
+                    <span class="inval-mail"></span>
                   </label>
-                  <label>
-                    <textarea class="textarea" placeholder="Comment" required name="" id="" cols="30" rows="10"></textarea>
-                  </label>
-                  <button class="form-button" type="submit">Send</button>
+                    <textarea class="textarea" placeholder="Comment" name="" id="" cols="30" rows="10"></textarea>
+                  <button class="form-button" type="submit"><span>Send</span
+                   ></button>
                 </form>
               </div>
               <div class="soc-networks">
@@ -341,7 +349,7 @@
           </div>
           <div class="rights">
             <p class="privacy-policy">Privacy Policy / Cookie settings</p>
-            <p class="green-harvest">©Green Harvest 2023</p>
+            <p class="green-harvest"><a href="#">&copy;Green Harvest 2023</a></p>
           </div>
         </div>
       </footer>
