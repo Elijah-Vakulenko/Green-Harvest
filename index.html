@@ -16,343 +16,675 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-
     <!-- ===HEADER=== -->
 
     <header class="header">
-    <div class="header-container">
-
+      <div class="header-container">
         <!-- ===LOGO=== -->
 
         <nav class="navigation">
-            <a class="header-logo" href="#">
-                <svg class="logo-icon" width="16" height="16">
-                    <use href="./img/icons.svg#icon-logo-icon"></use>
-                </svg>
-                <svg class="logo-title" width="148" height="12">
-                    <use href="./img/icons.svg#icon-harvest"></use>
-                </svg>
-            </a>
+          <a class="header-logo" href="#">
+            <svg class="logo-icon" width="16" height="16">
+              <use href="./img/icons.svg#icon-logo-icon"></use>
+            </svg>
+            <svg class="logo-title" width="148" height="12">
+              <use href="./img/icons.svg#icon-harvest"></use>
+            </svg>
+          </a>
 
-            <!-- ===DESKTOP MENU=== -->
+          <!-- ===DESKTOP MENU=== -->
 
-            <div class="desktop-menu">
-              <ul class="desktop-navigation">
-                <li><a class="desktop-link" href="#how-it-works">How It Works</a></li>
-                <li><a class="desktop-link" href="#vegetables">Vegetables</a></li>
-                <li><a class="desktop-link" href="#reviews">Reviews</a></li>
-              </ul>
-              <button type="button" data-open-modal class="desktop-shop-now-btn">Shop Now</button>
-            </div>
-            <button
-                type="button"
-                class="open-menu-btn"
-                data-menu-button
-                aria-expanded="false"
-                aria-controls="mob-menu">
-                <svg class="mob-btn" width="32" height="32">
-                    <use href="./img/icons.svg#icon-menu-burger-small"></use>
-                </svg>
+          <div class="desktop-menu">
+            <ul class="desktop-navigation">
+              <li>
+                <a class="desktop-link" href="#how-it-works">How It Works</a>
+              </li>
+              <li><a class="desktop-link" href="#vegetables">Vegetables</a></li>
+              <li><a class="desktop-link" href="#reviews">Reviews</a></li>
+            </ul>
+            <button type="button" data-open-modal class="desktop-shop-now-btn">
+              Shop Now
             </button>
+          </div>
+          <button
+            type="button"
+            class="open-menu-btn"
+            data-menu-button
+            aria-expanded="false"
+            aria-controls="mob-menu">
+            <svg class="mob-btn" width="32" height="32">
+              <use href="./img/icons.svg#icon-menu-burger-small"></use>
+            </svg>
+          </button>
         </nav>
-    </div>
-
-    <!-- ===MODAL WINDOW SHOP NOW=== -->
-
-    <div class="backdrop-modal is-hidden" data-backdrop>
-      
-      <div class="modal-window">
-        <button data-close-modal type="button" class="modal-btn">
-          <svg class="menu-cross" width="32" height="32">
-            <use href="./img/icons.svg#icon-censel"></use>
-          </svg>
-        </button>
-        <p class="modal-title">Place your <span>order now!</span></p>
-        <form class="modal-form">
-          <label>
-            <input class="modal-input" type="text" required placeholder="Full name"></label>
-          <label> 
-            <input class="modal-input" type="email" required placeholder="Email"></label>
-          <label> 
-            <input class="modal-input" type="text" required placeholder="Address"></label>
-          <label> 
-            <input class="modal-input" type="text" required placeholder="Choose your item"></label>
-            <label>
-            <textarea class="modal-input" name="" id="" cols="30" rows="10" placeholder="Comment"></textarea>
-          </label>
-          <button class="shop-now-btn shop-btn-box" type="submit">Order now</button>
-        </form>
       </div>
-    </div>
 
-    <!-- BACKDROP -->
+      <!-- ===MODAL WINDOW SHOP NOW=== -->
 
-    <div class="backdrop is-hidden" data-backdrop>
+      <div class="backdrop-modal is-hidden" data-backdrop>
+        <div class="modal-window">
+          <button data-close-modal type="button" class="modal-btn">
+            <svg class="menu-cross" width="32" height="32">
+              <use href="./img/icons.svg#icon-censel"></use>
+            </svg>
+          </button>
+          <p class="modal-title">Place your <span>order now!</span></p>
+          <form class="modal-form">
+            <label>
+              <input
+                class="modal-input"
+                type="text"
+                required
+                placeholder="Full name"
+            /></label>
+            <label>
+              <input
+                class="modal-input"
+                type="email"
+                required
+                placeholder="Email"
+            /></label>
+            <label>
+              <input
+                class="modal-input"
+                type="text"
+                required
+                placeholder="Address"
+            /></label>
+            <label>
+              <input
+                class="modal-input"
+                type="text"
+                required
+                placeholder="Choose your item"
+                id="selectedProducts"
+                list="productsList" />
+              <datalist id="productsList">
+                <option value="eggplant"></option>
+                <option value="leek"></option>
+                <option value="mushrooms"></option>
+                <option value="sweet potatoes"></option>
+                <option value="corn"></option>
+                <option value="carrot"></option>
+              </datalist>
+            </label>
+            <label>
+              <textarea
+                class="modal-input"
+                cols="30"
+                rows="10"
+                placeholder="Comment"></textarea>
+            </label>
+            <button class="shop-now-btn shop-btn-box" type="submit">
+              Order now
+            </button>
+          </form>
+        </div>
+      </div>
 
+      <!-- BACKDROP -->
+
+      <div class="backdrop is-hidden" data-backdrop>
         <!-- ===MOBILE MENU=== -->
 
         <div class="mob-menu is-open" data-menu id="mob-menu">
-            <div class="close-btn-box">
-                <button
-                type="button"
-                class="close-menu-btn is-open"
-                data-menu-button
-                aria-expanded="false"
-                aria-controls="mob-menu">
-                <svg width="32" height="32" aria-label="menu switcher">
-                  <use
-                    class="menu-cross"
-                    href="./img/icons.svg#icon-censel"></use>
-                </svg>
-              </button>
-            </div>
-             <nav class="mob-navigation">
-                <ul class="mob-menu-list">
-                  <li>
-                    <a class="mob-link current" href="#how-it-works">How It Works</a>
-                  </li>
-                  <li>
-                    <a class="mob-link" href="#vegetables">Vegetables</a>
-                  </li>
-                  <li>
-                    <a class="mob-link" href="#reviews">Reviews</a>
-                  </li>
-                </ul>
-              </nav>
-            <div class="shop-btn-box">
-                <button type="button" href="#yo" class="shop-now-btn">shop now</button>
-            </div>
+          <div class="close-btn-box">
+            <button
+              type="button"
+              class="close-menu-btn is-open"
+              data-menu-button
+              aria-expanded="false"
+              aria-controls="mob-menu">
+              <svg width="32" height="32" aria-label="menu switcher">
+                <use
+                  class="menu-cross"
+                  href="./img/icons.svg#icon-censel"></use>
+              </svg>
+            </button>
+          </div>
+          <nav class="mob-navigation">
+            <ul class="mob-menu-list">
+              <li>
+                <a class="mob-link current" href="#how-it-works"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a class="mob-link" href="#vegetables">Vegetables</a>
+              </li>
+              <li>
+                <a class="mob-link" href="#reviews">Reviews</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="shop-btn-box">
+            <a href="#yo" class="shop-now-btn">shop now</a>
+          </div>
         </div>
-    </div>
+      </div>
     </header>
 
     <main>
+      <!-- ===HERO=== -->
 
-        <!-- ===HERO=== -->
-
-        <section class="hero">
-            <div class="container hero-container">
-                <div class="hero-text">
-                <h1 class="hero-title">organic vegetables to your diet today!</h1>
-                <p class="hero-description">
-                    Our expertly curated vegetable baskets are made with the freshest,
-                    highest quality vegetables available. Fresh Harvest Box has got you
-                    covered. Fresh, high-quality vegetables in expertly curated vegetable
-                    baskets delivered to you.
-                </p>
-            </div>
-        </section>
-
-        <!-- ===HOW IT WORKS=== -->
-
-        <section class="how-it-works">
-          <div class="hiw-container">
-            <h2 class="visually-hidden">How it works</h2>
-            <div class="left-section">
-              <picture class="image-container">
-                <source srcset="./img/person-1x.jpg 1x, ./img/person-2x.jpg 2x" />
-                <img src="./img/person-1x.jpg" alt="Woman chopping an apple" />
-              </picture>
-            </div>
-            <div class="right-section" id="how-it-works">
-              <div class="hiw-text-area">
-                <p class="hiw-subtitle" >
-                  To order your <span>vegetable</span> basket, simply follow these
-                  <span>easy steps</span>
-                </p>
-                <p class="hiw-description">
-                  Our baskets are assembled with care and delivered straight to your
-                  doorstep, so you can enjoy the taste of fresh fruit without ever
-                  leaving your home.
-                </p>
-                <ol class="hiw-item-list">
-                  <li class="hiw-item">
-                    <div class="hiw-item-text">
-                      <p>
-                        Just choose<span> the vegetable</span>you want to order by
-                        clicking on the checkboxes<span> next to it</span>.
-                      </p>
-                    </div>
-                  </li>
-                  <li class="hiw-item">
-                    <div class="hiw-item-text">
-                      <p>Click on <span> the basket</span> and fill out the form.</p>
-                    </div>
-                  </li>
-                  <li class="hiw-item">
-                    <div class="hiw-item-text">
-                      <p>
-                        Sit back and relax! Your <span> fresh vegetables</span> basket
-                        will be delivered.
-                      </p>
-                    </div>
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ===DISCOUNT=== -->
-
-        <section class="discount">
-          <div class="container container-extra">
-            <h2 class="visually-hidden">Discount offer</h2>
-            <p class="offer"><span>Discount up to 40%!</span> Taste the vitamins and keep your health</p>
-          </div>
-        </section>
-
-        <!-- ===ORGANIC VEGETABLES=== -->
-        <section class="organic-vegetables">
-          <div class="container container-extra">
-            <h2 class="ov-title" id="vegetables">Organic <span>Vegetables</span></h2>
-            <p class="ov-description">Our organic vegetables are hand-picked from local farms and delivered straight to your doorstep, ensuring that you get the freshest and most nutritious produce possible.</p>
-            <ul class="ov-list">
-              <li class="ov-card">
-                <h3 class="ov-item-title">eggplant</h3>
-                <p class="item-price">60 Uah / Kg</p>
-                <picture><source/><img class="item-img" src="./img/desct-veg-1-1x.png" alt="eggplant" /></picture>
-                <p class="ov-card-overlay">Raw eggplant can have a bitter taste, but it becomes tender when cooked and develops a rich, complex flavor. Due to its texture and bulk, it is sometimes used as a meat substitute in vegan and vegetarian cuisines.</p>
-              </li>
-              <li class="ov-card">
-                <h3 class="ov-item-title">leek</h3>
-                <p class="item-price">50 Uah / Kg</p>
-                <picture><source/><img class="item-img" src="./img/desct-veg-2-1x.png" alt="leek" /></picture>
-                <p class="ov-card-overlay">Leeks have a mild, onion-like taste. In its raw state, the vegetable is crunchy and firm. Raw leeks can be used in salads, doing especially well when they are the prime ingredient.</p>
-              </li>
-              <li class="ov-card">
-                <h3 class="ov-item-title">mushrooms</h3>
-                <p class="item-price">40 Uah / Kg</p>
-                <picture><source/><img class="item-img" src="./img/desct-veg-3-1x.png" alt="mushrooms" /></picture>
-                <p class="ov-card-overlay">Raw white mushrooms are an excellent source of the B vitamins, riboflavin, niacin, and pantothenic acid. Fresh mushrooms are also a good source of the dietary minerals, phosphorus and potassium.</p>
-              </li>
-              <li class="ov-card">
-                <h3 class="ov-item-title">corn</h3>
-                <p class="item-price">60 Uah / Kg</p>
-                <picture><source/><img class="item-img" src="./img/desct-veg-4-1x.png" alt="corn" /></picture>
-                <p class="ov-card-overlay">Corn is used to make a wide variety of dishes including Mexican tortillas and tamales, Italian polenta, and American hominy grits.</p>
-              </li>
-              <li class="ov-card">
-                <h3 class="ov-item-title">sweet potatoes</h3>
-                <p class="item-price">50 Uah / Kg</p>
-                <picture><source/><img class="item-img" src="./img/desct-veg-5-1x.png" alt="sweet potatoes" /></picture>
-                <p class="ov-card-overlay">It is a traditional fall dish, boiled or roasted.</p>
-              </li>
-              <li class="ov-card">
-                <h3 class="ov-item-title">carrot</h3>
-                <p class="item-price">40 Uah / Kg</p>
-                <picture><source/><img class="item-img" src="./img/desct-veg-6-1x.png" alt="carrot" /></picture>
-                <p class="ov-card-overlay">The sweetness of carrots allows the vegetable to be used in some fruit-like roles. Grated carrots are used in carrot cakes, as well as carrot puddings.</p>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- ===REVIEWS=== -->
-
-        <section class="reviews" id="reviews">
-          <div class="container container-extra">
-            <h2 class="reviews-title">Reviews from Our <span>Customers</span></h2>
-            <p class="review-description">Words of our customers: impressions and opinions about the quality of our services and the freshness of our products.</p>
-            <ul class="reviews-list">
-              <li class="reviewer-card">
-                <picture>
-                  <source media="" srcset="">
-                  <img src="./img/John-Wax-1x.png" alt="customer John"></picture>
-                <h3 class="reviewer-name">John Wax</h3>
-                <p class="review-comment">These vegetables are my secret to delicious and healthy meals. The quality is always at the highest level, the aroma and taste are enchanting. I advise every fan of real products!</p>
-              </li>
-              <li class="reviewer-card">
-                <picture>
-                  <source media="" srcset="">
-                  <img src="./img/Victoria-1x.png" alt="customer Victoria"></picture>
-                <h3 class="reviewer-name">Victoria Romashenko</h3>
-                <p class="review-comment">I love how fast and fresh the vegetables are delivered. Salads always turn out so appetizing, and soups are real masterpieces. The quality is impeccable!</p>
-              </li>
-              <li class="reviewer-card">
-                <picture>
-                  <source media="" srcset="">
-                  <img src="./img/Ihor-1x.png" alt="customer Ihor"></picture>
-                <h3 class="reviewer-name">Ihor Trachuk</h3>
-                <p class="review-comment">Recently tried my fresh tomatoes and peppers - amazing! The authenticity of the taste, as if from the garden directly to my table. It is now my main vegetable supplier.</p>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- ===YOUR ORDER=== -->
-
-        <section class="your-order">
-          <div class="container container-extra">
-            <h2 class="your-order-title" id="yo">Fresh <span>harvest</span> Box Has Got You Covered</h2>
-            <p class="order-description">Our boxes are packed with delicious, nutritious vegetables, perfect for anyone looking to eat healthier or support local farmers. Order your box today and start enjoying the best that nature has to offer!</p>
-            <div class="order-cards">
-              <div class="form-card">
-                <h3 class="form-subtitle">Ordering <span class="pink">from us</span> is quick and easy! Fill out <span class="green">the form</span> below and we will contact you !</h3>
-                <form class="form">
-                  <label for="name">
-                    <input id="name" class="input-field" pattern="[A-Z][a-zA-Z]{1,}( [A-Z][a-zA-Z]{1,}){1,2}" placeholder="Full Name" type="text" required>
-                  <span class="val"></span>
-                  <span class="inval"></span>
-                  </label>
-                  <label for="email">
-                    <input id="email" class="input-field" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" type="email" required>
-                    <span class="val"></span>
-                    <span class="inval-mail"></span>
-                  </label>
-                    <textarea class="textarea" placeholder="Comment" name="" id="" cols="30" rows="10"></textarea>
-                  <button class="form-button" type="submit"><span>Send</span
-                   ></button>
-                </form>
-              </div>
-              <div class="soc-networks">
-                <div class="form-img"></div>
-                <p class="network-invitation">Follow us on our social networks:</p>
-                <ul class="soc-link-list">
-                  <li><a class="soc-link" target="_blank" href="https://www.instagram.com/">instagram</a></li>
-                  <li><a class="soc-link" target="_blank" href="https://www.facebook.com/">facebook</a></li>
-                  <li><a class="soc-link" target="_blank" href="https://www.youtube.com/">youtube</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-    </main>
-
-      <!-- ===FOOTER=== -->
-
-      <footer class="footer">
-        <div class="container">
-          <div class="footer-block">
-            <div class="logo-slogan">
-              <a class="header-logo footer-logo" href="#">
-                <svg class="logo-icon" width="16" height="16">
-                    <use href="./img/icons.svg#icon-logo-icon"></use>
-                </svg>
-                <svg class="logo-title" width="148" height="12">
-                    <use href="./img/icons.svg#icon-harvest"></use>
-                </svg>
-              </a>
-              <p class="slogan">Whether you're looking for a healthy snack or a thoughtful gift, our fruit baskets are the perfect choice.</p>
-            </div>
-            <ul class="footer-navigation">
-              <li><a href="#how-it-works">How It Works</a></li>
-              <li><a href="#vegetables">Vegetables</a></li>
-              <li><a href="#reviews">Reviews</a></li>
-            </ul>
-            <address>
-              <ul class="contacts">
-                <li><a target="_blank" href="tel:+380684439426">+380 (68) 443-94-26</a></li>
-                <li><a target="_blank" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x8752f35bbcfb1369:0x260ab4842496c9e4?sa=X&ved=2ahUKEwiSp6P4i-iEAxUkSfEDHTDLBTYQ4kB6BAgOEAA">1678 S. Pioneer Road Salt<br> Lake City UT 84104</a></li>
-              </ul>
-            </address>
-          </div>
-          <div class="rights">
-            <p class="privacy-policy">Privacy Policy / Cookie settings</p>
-            <p class="green-harvest"><a href="#">&copy;Green Harvest 2023</a></p>
+      <section class="hero">
+        <div class="container hero-container">
+          <div class="hero-text">
+            <h1 class="hero-title">organic vegetables to your diet today!</h1>
+            <p class="hero-description">
+              Our expertly curated vegetable baskets are made with the freshest,
+              highest quality vegetables available. Fresh Harvest Box has got
+              you covered. Fresh, high-quality vegetables in expertly curated
+              vegetable baskets delivered to you.
+            </p>
           </div>
         </div>
-      </footer>
+      </section>
+
+      <!-- ===HOW IT WORKS=== -->
+
+      <section class="how-it-works">
+        <div class="hiw-container">
+          <h2 class="visually-hidden">How it works</h2>
+          <div class="left-section">
+            <picture class="image-container">
+              <source srcset="./img/person-1x.jpg 1x, ./img/person-2x.jpg 2x" />
+              <img src="./img/person-1x.jpg" alt="Woman chopping an apple" />
+            </picture>
+          </div>
+          <div class="right-section" id="how-it-works">
+            <div class="hiw-text-area">
+              <p class="hiw-subtitle">
+                To order your <span>vegetable</span> basket, simply follow these
+                <span>easy steps</span>
+              </p>
+              <p class="hiw-description">
+                Our baskets are assembled with care and delivered straight to
+                your doorstep, so you can enjoy the taste of fresh fruit without
+                ever leaving your home.
+              </p>
+              <ol class="hiw-item-list">
+                <li class="hiw-item">
+                  <div class="hiw-item-text">
+                    <p>
+                      Just choose<span> the vegetable </span>you want to order
+                      by clicking on the checkboxes<span> next to it</span>.
+                    </p>
+                  </div>
+                </li>
+                <li class="hiw-item">
+                  <div class="hiw-item-text">
+                    <p>
+                      Click on <span> the basket</span> and fill out the form.
+                    </p>
+                  </div>
+                </li>
+                <li class="hiw-item">
+                  <div class="hiw-item-text">
+                    <p>
+                      Sit back and relax! Your
+                      <span> fresh vegetables</span> basket will be delivered.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===DISCOUNT=== -->
+
+      <section class="discount">
+        <div class="container container-extra">
+          <h2 class="visually-hidden">Discount offer</h2>
+          <p class="offer">
+            <span>Discount up to 40%!</span> Taste the vitamins and keep your
+            health
+          </p>
+        </div>
+      </section>
+
+      <!-- ===ORGANIC VEGETABLES=== -->
+      <section class="organic-vegetables">
+        <div class="container container-extra">
+          <h2 class="ov-title" id="vegetables">
+            Organic <span>Vegetables</span>
+          </h2>
+          <p class="ov-description">
+            Our organic vegetables are hand-picked from local farms and
+            delivered straight to your doorstep, ensuring that you get the
+            freshest and most nutritious produce possible.
+          </p>
+          <ul class="ov-list">
+            <li class="ov-card">
+              <div class="ov-item">
+                <h3 class="ov-item-title">eggplant</h3>
+                <p class="item-price">60 Uah / Kg</p>
+                <div class="item-checkbox">
+                  <input
+                    id="item1"
+                    name="vegetable-item"
+                    class="checkbox visually-hidden"
+                    type="checkbox"
+                    value="true" />
+                  <label class="checkbox-label" for="item1">
+                    <div class="custom-checkbox">
+                      <svg width="15" height="12">
+                        <use href="./img/icons.svg#icon-click"></use>
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="ov-item-pic">
+                <picture
+                  ><source
+                    srcset="
+                      ./img/desct-veg-1-1x.png 1x,
+                      ./img/desct-veg-1-2x.png 2x
+                    " />
+                  <img
+                    class="item-img"
+                    src="./img/desct-veg-1-1x.png"
+                    alt="eggplant"
+                /></picture>
+                <p class="ov-card-overlay">
+                  Raw eggplant can have a bitter taste, but it becomes tender
+                  when cooked and develops a rich, complex flavor. Due to its
+                  texture and bulk, it is sometimes used as a meat substitute in
+                  vegan and vegetarian cuisines.
+                </p>
+              </div>
+            </li>
+            <li class="ov-card">
+              <div class="ov-item">
+                <h3 class="ov-item-title">leek</h3>
+                <p class="item-price">50 Uah / Kg</p>
+                <div class="item-checkbox">
+                  <input
+                    id="item2"
+                    name="vegetable-item"
+                    class="checkbox visually-hidden"
+                    type="checkbox"
+                    value="true" />
+                  <label class="checkbox-label" for="item2">
+                    <div class="custom-checkbox">
+                      <svg width="15" height="12">
+                        <use href="./img/icons.svg#icon-click"></use>
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="ov-item-pic">
+                <picture
+                  ><source
+                    srcset="
+                      ./img/desct-veg-2-1x.png 1x,
+                      ./img/desct-veg-2-2x.png 2x
+                    " />
+                  <img
+                    class="item-img"
+                    src="./img/desct-veg-2-1x.png"
+                    alt="leek"
+                /></picture>
+                <p class="ov-card-overlay">
+                  Leeks have a mild, onion-like taste. In its raw state, the
+                  vegetable is crunchy and firm. Raw leeks can be used in
+                  salads, doing especially well when they are the prime
+                  ingredient.
+                </p>
+              </div>
+            </li>
+            <li class="ov-card">
+              <div class="ov-item">
+                <h3 class="ov-item-title">mushrooms</h3>
+                <p class="item-price">40 Uah / Kg</p>
+                <div class="item-checkbox">
+                  <input
+                    id="item3"
+                    name="vegetable-item"
+                    class="checkbox visually-hidden"
+                    type="checkbox"
+                    value="true" />
+                  <label class="checkbox-label" for="item3">
+                    <div class="custom-checkbox">
+                      <svg width="15" height="12">
+                        <use href="./img/icons.svg#icon-click"></use>
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="ov-item-pic">
+                <picture
+                  ><source
+                    srcset="
+                      ./img/desct-veg-3-1x.png 1x,
+                      ./img/desct-veg-3-2x.png 2x
+                    " />
+                  <img
+                    class="item-img"
+                    src="./img/desct-veg-3-1x.png"
+                    alt="mushrooms"
+                /></picture>
+                <p class="ov-card-overlay">
+                  Raw white mushrooms are an excellent source of the B vitamins,
+                  riboflavin, niacin, and pantothenic acid. Fresh mushrooms are
+                  also a good source of the dietary minerals, phosphorus and
+                  potassium.
+                </p>
+              </div>
+            </li>
+            <li class="ov-card">
+              <div class="ov-item">
+                <h3 class="ov-item-title">corn</h3>
+                <p class="item-price">60 Uah / Kg</p>
+                <div class="item-checkbox">
+                  <input
+                    id="item4"
+                    name="vegetable-item"
+                    class="checkbox visually-hidden"
+                    type="checkbox"
+                    value="true" />
+                  <label class="checkbox-label" for="item4">
+                    <div class="custom-checkbox">
+                      <svg width="15" height="12">
+                        <use href="./img/icons.svg#icon-click"></use>
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="ov-item-pic">
+                <picture
+                  ><source
+                    srcset="
+                      ./img/desct-veg-4-1x.png 1x,
+                      ./img/desct-veg-4-2x.png 2x
+                    " />
+                  <img
+                    class="item-img"
+                    src="./img/desct-veg-4-1x.png"
+                    alt="corn"
+                /></picture>
+                <p class="ov-card-overlay">
+                  Corn is used to make a wide variety of dishes including
+                  Mexican tortillas and tamales, Italian polenta, and American
+                  hominy grits.
+                </p>
+              </div>
+            </li>
+            <li class="ov-card">
+              <div class="ov-item">
+                <h3 class="ov-item-title">sweet potatoes</h3>
+                <p class="item-price">50 Uah / Kg</p>
+                <div class="item-checkbox">
+                  <input
+                    id="item5"
+                    name="vegetable-item"
+                    class="checkbox visually-hidden"
+                    type="checkbox"
+                    value="true" />
+                  <label class="checkbox-label" for="item5">
+                    <div class="custom-checkbox">
+                      <svg width="15" height="12">
+                        <use href="./img/icons.svg#icon-click"></use>
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="ov-item-pic">
+                <picture
+                  ><source
+                    srcset="
+                      ./img/desct-veg-5-1x.png 1x,
+                      ./img/desct-veg-5-2x.png 2x
+                    " />
+                  <img
+                    class="item-img"
+                    src="./img/desct-veg-5-1x.png"
+                    alt="sweet potatoes"
+                /></picture>
+                <p class="ov-card-overlay">
+                  It is a traditional fall dish, boiled or roasted.
+                </p>
+              </div>
+            </li>
+            <li class="ov-card">
+              <div class="ov-item">
+                <h3 class="ov-item-title">carrot</h3>
+                <p class="item-price">40 Uah / Kg</p>
+                <div class="item-checkbox">
+                  <input
+                    id="item6"
+                    name="vegetable-item"
+                    class="checkbox visually-hidden"
+                    type="checkbox"
+                    value="true" />
+                  <label class="checkbox-label" for="item6">
+                    <div class="custom-checkbox">
+                      <svg width="15" height="12">
+                        <use href="./img/icons.svg#icon-click"></use>
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="ov-item-pic">
+                <picture
+                  ><source
+                    srcset="
+                      ./img/desct-veg-6-1x.png 1x,
+                      ./img/desct-veg-6-2x.png 2x
+                    " />
+                  <img
+                    class="item-img"
+                    src="./img/desct-veg-6-1x.png"
+                    alt="carrot"
+                /></picture>
+                <p class="ov-card-overlay">
+                  The sweetness of carrots allows the vegetable to be used in
+                  some fruit-like roles. Grated carrots are used in carrot
+                  cakes, as well as carrot puddings.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===REVIEWS=== -->
+
+      <section class="reviews" id="reviews">
+        <div class="container container-extra">
+          <h2 class="reviews-title">Reviews from Our <span>Customers</span></h2>
+          <p class="review-description">
+            Words of our customers: impressions and opinions about the quality
+            of our services and the freshness of our products.
+          </p>
+          <ul class="reviews-list">
+            <li class="reviewer-card">
+              <picture>
+                <source
+                  srcset="./img/John-Wax-1x.png 1x, ./img/John-Wax-2x.png 2x" />
+                <img src="./img/John-Wax-1x.png" alt="customer John"
+              /></picture>
+              <h3 class="reviewer-name">John Wax</h3>
+              <p class="review-comment">
+                These vegetables are my secret to delicious and healthy meals.
+                The quality is always at the highest level, the aroma and taste
+                are enchanting. I advise every fan of real products!
+              </p>
+            </li>
+            <li class="reviewer-card">
+              <picture>
+                <source
+                  srcset="./img/Victoria-1x.png 1x, ./img/Victoria-2x.png 2x" />
+                <img src="./img/Victoria-1x.png" alt="customer Victoria"
+              /></picture>
+              <h3 class="reviewer-name">Victoria Romashenko</h3>
+              <p class="review-comment">
+                I love how fast and fresh the vegetables are delivered. Salads
+                always turn out so appetizing, and soups are real masterpieces.
+                The quality is impeccable!
+              </p>
+            </li>
+            <li class="reviewer-card">
+              <picture>
+                <source srcset="./img/Ihor-1x.png 1x, ./img/Ihor-2x.png 2x" />
+                <img src="./img/Ihor-1x.png" alt="customer Ihor"
+              /></picture>
+              <h3 class="reviewer-name">Ihor Trachuk</h3>
+              <p class="review-comment">
+                Recently tried my fresh tomatoes and peppers - amazing! The
+                authenticity of the taste, as if from the garden directly to my
+                table. It is now my main vegetable supplier.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===YOUR ORDER=== -->
+
+      <section class="your-order">
+        <div class="container container-extra">
+          <h2 class="your-order-title" id="yo">
+            Fresh <span>harvest</span> Box Has Got You Covered
+          </h2>
+          <p class="order-description">
+            Our boxes are packed with delicious, nutritious vegetables, perfect
+            for anyone looking to eat healthier or support local farmers. Order
+            your box today and start enjoying the best that nature has to offer!
+          </p>
+          <div class="order-cards">
+            <div class="form-card">
+              <h3 class="form-subtitle">
+                Ordering <span class="pink">from us</span> is quick and easy!
+                Fill out <span class="green">the form</span> below and we will
+                contact you !
+              </h3>
+              <form class="form">
+                <label for="name">
+                  <input
+                    id="name"
+                    class="input-field"
+                    pattern="[A-Z][a-zA-Z]{1,}( [A-Z][a-zA-Z]{1,}){1,2}"
+                    placeholder="Full Name"
+                    type="text"
+                    required />
+                  <span class="val"></span>
+                  <span class="inval"></span>
+                </label>
+                <label for="email">
+                  <input
+                    id="email"
+                    class="input-field"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    placeholder="Email"
+                    type="email"
+                    required />
+                  <span class="val"></span>
+                  <span class="inval-mail"></span>
+                </label>
+                <textarea
+                  class="textarea"
+                  placeholder="Comment"
+                  cols="30"
+                  rows="10"></textarea>
+                <button class="form-button" type="submit">
+                  <span>Send</span>
+                </button>
+              </form>
+            </div>
+            <div class="soc-networks">
+              <div class="form-img"></div>
+              <p class="network-invitation">
+                Follow us on our social networks:
+              </p>
+              <ul class="soc-link-list">
+                <li>
+                  <a
+                    class="soc-link"
+                    target="_blank"
+                    href="https://www.instagram.com/"
+                    >instagram</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="soc-link"
+                    target="_blank"
+                    href="https://www.facebook.com/"
+                    >facebook</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="soc-link"
+                    target="_blank"
+                    href="https://www.youtube.com/"
+                    >youtube</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===FOOTER=== -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-block">
+          <div class="logo-slogan">
+            <a class="header-logo footer-logo" href="#">
+              <svg class="logo-icon" width="16" height="16">
+                <use href="./img/icons.svg#icon-logo-icon"></use>
+              </svg>
+              <svg class="logo-title" width="148" height="12">
+                <use href="./img/icons.svg#icon-harvest"></use>
+              </svg>
+            </a>
+            <p class="slogan">
+              Whether you're looking for a healthy snack or a thoughtful gift,
+              our fruit baskets are the perfect choice.
+            </p>
+          </div>
+          <ul class="footer-navigation">
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#vegetables">Vegetables</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+          </ul>
+          <address>
+            <ul class="contacts">
+              <li>
+                <a target="_blank" href="tel:+380684439426"
+                  >+380 (68) 443-94-26</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x8752f35bbcfb1369:0x260ab4842496c9e4?sa=X&ved=2ahUKEwiSp6P4i-iEAxUkSfEDHTDLBTYQ4kB6BAgOEAA"
+                  >1678 S. Pioneer Road Salt<br />
+                  Lake City UT 84104</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="rights">
+          <p class="privacy-policy">Privacy Policy / Cookie settings</p>
+          <p class="green-harvest"><a href="#">&copy;Green Harvest 2023</a></p>
+        </div>
+      </div>
+    </footer>
 
     <script src="./menu.js"></script>
     <script src="./modal.js"></script>

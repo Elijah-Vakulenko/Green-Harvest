@@ -951,6 +951,11 @@ header {
   padding: 3px 10px;
 }
 
+.offer span:hover {
+  background-color: #7a3145;
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 @media screen and (min-width: 768px) {
   .offer {
     font-size: 64px;
@@ -1017,13 +1022,15 @@ header {
   flex-direction: column;
   background-color: #fbfbfb;
   border-radius: 40px;
-  padding: 32px 26px;
-  position: relative;
-  overflow: hidden;
 }
 
 .ov-card:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.ov-item {
+  padding: 26px 26px 5px;
+  position: relative;
 }
 
 .ov-item-title {
@@ -1044,12 +1051,50 @@ header {
   text-transform: uppercase;
 }
 
-.item-img {
-  transition: transform 0.3s ease;
+/* Custom Checkbox */
+
+.item-checkbox {
+  position: absolute;
+  top: 26px;
+  right: 26px;
 }
 
-.item-img:hover {
-  transform: scale(1.1);
+.checkbox {
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  width: 20px;
+  height: 20px;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .checkbox-label .custom-checkbox {
+  background-color: #622133;
+  border: none;
+  fill: #f4f4fd;
+}
+
+/* overlay with description */
+
+.ov-item-pic {
+  position: relative;
+  overflow: hidden;
+  padding: 26px;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
 }
 
 .ov-card-overlay {
@@ -1060,18 +1105,27 @@ header {
   color: #622133;
   opacity: 0.8;
   background-color: #d5bfc5;
-  padding: 100px 26px 26px 26px;
+  padding: 26px 26px 26px 26px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.ov-card:active .ov-card-overlay {
+.ov-item-pic:active .ov-card-overlay {
   transform: translateY(0);
+}
+
+.item-img {
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
+
+.item-img:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {
@@ -1222,6 +1276,11 @@ header {
     padding: 20px;
     width: calc((100% - 50px) / 3);
   }
+
+  .reviewer-card img {
+    border: 3px solid #d5bfc5;
+    border-radius: 50%;
+  }
 }
 
 /* ===YOUR ORDER=== */
@@ -1339,7 +1398,7 @@ header {
 
 .form-button {
   border-radius: 30px;
-  padding: 16px auto;
+  padding: 16px 16px;
   width: 100%;
   height: 50px;
   border: none;
@@ -1349,12 +1408,9 @@ header {
   color: #fbfbfb;
 }
 
-/* .form-button span {
-  transition: transform 0.3s ease;
-}
-
-.form-button span:hover {
-  transform: scale(1.6);
+/* .form-button {
+  transition: transform 0.3 ease;
+  transform: scale(1.1);
 } */
 
 .soc-networks {
