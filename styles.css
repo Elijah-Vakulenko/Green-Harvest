@@ -917,7 +917,7 @@ header {
 
 /* ===DISCOUNT=== */
 
-.discount {
+.discount-section {
   background-color: #fbfbfb;
 }
 
@@ -953,7 +953,7 @@ header {
 
 .offer span:hover {
   background-color: #7a3145;
-  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 768px) {
@@ -1049,6 +1049,20 @@ header {
   line-height: 1.28;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+  position: relative;
+}
+
+.discount {
+  display: block;
+  background-color: #622133;
+  color: #f4f4fd;
+  padding: 3px 5px;
+  border-radius: 5px;
+  width: 65px;
+  position: absolute;
+  top: 60px;
+  right: 26px;
+  text-align: center;
 }
 
 /* Custom Checkbox */
@@ -1214,6 +1228,11 @@ header {
   display: flex;
 }
 
+.reviewer-card img {
+  border: 3px solid #d5bfc5;
+  border-radius: 50%;
+}
+
 .reviewer-name {
   font-weight: 600;
   font-size: 16px;
@@ -1224,6 +1243,7 @@ header {
   margin-bottom: 8px;
   margin-top: 20px;
 }
+
 .review-comment {
   color: rgba(4, 3, 6, 0.4);
   text-align: center;
@@ -1275,11 +1295,6 @@ header {
     display: flex;
     padding: 20px;
     width: calc((100% - 50px) / 3);
-  }
-
-  .reviewer-card img {
-    border: 3px solid #d5bfc5;
-    border-radius: 50%;
   }
 }
 
@@ -1417,7 +1432,9 @@ header {
   background-color: #576f35;
   border-radius: 30px;
   padding: 40px 20px;
+  text-align: center;
 }
+
 .form-img {
   border-radius: 15px;
   width: 100%;
@@ -1430,7 +1447,7 @@ header {
 
 .network-invitation {
   font-weight: 600;
-  color: rgba(251, 251, 251, 0.5);
+  color: #fbfbfb;
   margin-bottom: 14px;
 }
 
@@ -1438,20 +1455,19 @@ header {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 8px;
+  gap: 15px;
+  justify-content: center;
 }
 
-.soc-link {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.08333;
-  letter-spacing: -0.01em;
+.soc-icon {
+  fill: #fbfbfb;
+  width: 30px;
+  height: 30px;
   transition: transform 0.3s ease;
 }
 
-.soc-link-list li:not(:last-child) a::after {
-  content: "•";
-  margin-left: 8px;
+.soc-icon:hover {
+  transform: scale(1.2);
 }
 
 @media screen and (min-width: 768px) {
@@ -1499,9 +1515,9 @@ header {
     line-height: 1.11111;
   }
 
-  .soc-link {
-    font-size: 32px;
-    line-height: 1;
+  .soc-icon {
+    width: 50px;
+    height: 50px;
   }
 }
 
