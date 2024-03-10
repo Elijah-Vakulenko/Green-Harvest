@@ -1151,7 +1151,8 @@ header {
   border-radius: 24px;
   padding: 20px 16px 38px;
   max-width: 335px;
-  min-width: 298px;
+  width: 100%;
+  /* min-width: 298px; */
 }
 
 .reviewer-card:first-child {
@@ -1172,6 +1173,7 @@ header {
   color: rgba(4, 3, 6, 0.4);
   text-align: center;
   max-width: 288px;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1260,9 +1262,16 @@ header {
   border: 1px solid rgba(20, 20, 20, 0.2);
   border-radius: 30px;
   padding: 14px;
-  width: 295px;
+  width: 100%;
   height: 46px;
   margin-bottom: 15px;
+}
+
+.input-field:hover,
+.input-field:focus,
+.input-field:focus-visible,
+.textarea {
+  border: 1px solid #7a3145;
 }
 
 .input-field::placeholder,
@@ -1274,28 +1283,28 @@ header {
   letter-spacing: -0.02em;
 }
 
-input:valid {
-  border: 1px solid #3CBC81;
-
+.input-field:valid::after {
+  content: "Succes";
+  border: 1px solid #3cbc81;
 }
 
-input:invalid {
-  border: 1px solid #E74A3B;
+.input-field:invalid {
+  border: 1px solid #e74a3b;
 }
 
 .textarea {
   border: 1px solid rgba(20, 20, 20, 0.2);
   border-radius: 15px;
   padding: 14px;
-  width: 295px;
+  width: 100%;
   height: 90px;
   margin-bottom: 25px;
 }
 
 .form-button {
   border-radius: 30px;
-  padding: 16px 129px;
-  width: 295px;
+  padding: 16px auto;
+  width: 100%;
   height: 50px;
   border: none;
   background-color: #576f35;
@@ -1311,7 +1320,7 @@ input:invalid {
 }
 .form-img {
   border-radius: 15px;
-  width: 295px;
+  width: 100%;
   height: 273px;
   background-image: url(./img/squeezing-1x.jpg);
   object-fit: cover;
@@ -1431,13 +1440,125 @@ input:invalid {
 
 .footer {
   background-color: #7a3145;
+  padding: 40px 0;
 }
 
-@media screen and (min-width: 375px) {
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.footer-logo {
+  margin-bottom: 14px;
+}
+
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.footer-navigation li a:hover,
+.footer-navigation li a:focus {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-style: normal;
+}
+
+.rights {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  color: rgba(251, 251, 251, 0.5);
+}
+
+.privacy-policy {
+  line-height: 1.33333;
+}
+
+.green-harvest {
+  line-height: 1.16667;
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    padding: 32px 0;
+  }
+
+  .footer-block {
+    width: 704px;
+    height: 295px;
+    flex-wrap: wrap;
+    column-gap: 224px;
+    gap: 0;
+    margin-bottom: 100px;
+  }
+
+  .footer-navigation {
+    margin-bottom: 64px;
+    font-size: 32px;
+    gap: 25px;
+  }
+
+  .logo-slogan {
+    margin-bottom: 192px;
+  }
+
+  .footer-logo {
+    height: 18px;
+    width: 194px;
+    margin-bottom: 25px;
+  }
+
+  .slogan {
+    width: 265px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .contacts {
+    gap: 25px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.11111;
+    letter-spacing: -0.01em;
+  }
+
+  .rights {
+    font-size: 18px;
+    line-height: 1.11111;
+  }
 }
 
 @media screen and (min-width: 1280px) {
+  .logo-slogan {
+    margin-bottom: 0;
+    margin-right: 302px;
+  }
+
+  .footer-block {
+    flex-direction: row;
+    width: 100%;
+    height: 146px;
+    margin-bottom: 125px;
+  }
+
+  .footer-navigation {
+    margin-right: 121px;
+    margin-bottom: 0;
+  }
 }

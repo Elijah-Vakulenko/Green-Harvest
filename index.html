@@ -115,7 +115,7 @@
                 </ul>
               </nav>
             <div class="shop-btn-box">
-                <button href="#your-order" class="shop-now-btn">shop now</button>
+                <button type="button" href="#yo" class="shop-now-btn">shop now</button>
             </div>
         </div>
     </div>
@@ -279,19 +279,19 @@
 
         <section class="your-order">
           <div class="container container-extra">
-            <h2 class="your-order-title" id="your-order">Fresh <span>harvest</span> Box Has Got You Covered</h2>
+            <h2 class="your-order-title" id="yo">Fresh <span>harvest</span> Box Has Got You Covered</h2>
             <p class="order-description">Our boxes are packed with delicious, nutritious vegetables, perfect for anyone looking to eat healthier or support local farmers. Order your box today and start enjoying the best that nature has to offer!</p>
             <div class="order-cards">
               <div class="form-card">
                 <h3 class="form-subtitle">Ordering <span class="pink">from us</span> is quick and easy! Fill out <span class="green">the form</span> below and we will contact you !</h3>
                 <form class="form">
-                  <label for="">
-                    <input class="input-field" placeholder="Full Name" type="text" required>
+                  <label>
+                    <input class="input-field" pattern="[A-Z][a-z]+( [A-Z][a-z]+){1,2}" placeholder="Full Name" type="text" required>
                   </label>
-                  <label for="">
+                  <label>
                     <input class="input-field" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" type="email" required>
                   </label>
-                  <label for="">
+                  <label>
                     <textarea class="textarea" placeholder="Comment" required name="" id="" cols="30" rows="10"></textarea>
                   </label>
                   <button class="form-button" type="submit">Send</button>
@@ -315,29 +315,34 @@
 
       <footer class="footer">
         <div class="container">
-          <div class="logo-slogan">
-            <a class="header-logo" href="#">
-              <svg class="logo-icon" width="16" height="16">
-                  <use href="./img/icons.svg#icon-logo-icon"></use>
-              </svg>
-              <svg class="logo-title" width="148" height="12">
-                  <use href="./img/icons.svg#icon-harvest"></use>
-              </svg>
-            </a>
-            <p>Whether you're looking for a healthy snack or a thoughtful gift, our fruit baskets are the perfect choice.</p>
-          </div>
-          <ul>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#vegetables">Vegetables</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-          </ul>
-          <address>
-            <ul>
-              <li><a href="">+380 (68) 443-94-26</a></li>
-              <li><a href="">1678 S. Pioneer Road Salt<br> Lake City UT 84104</a></li>
+          <div class="footer-block">
+            <div class="logo-slogan">
+              <a class="header-logo footer-logo" href="#">
+                <svg class="logo-icon" width="16" height="16">
+                    <use href="./img/icons.svg#icon-logo-icon"></use>
+                </svg>
+                <svg class="logo-title" width="148" height="12">
+                    <use href="./img/icons.svg#icon-harvest"></use>
+                </svg>
+              </a>
+              <p class="slogan">Whether you're looking for a healthy snack or a thoughtful gift, our fruit baskets are the perfect choice.</p>
+            </div>
+            <ul class="footer-navigation">
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#vegetables">Vegetables</a></li>
+              <li><a href="#reviews">Reviews</a></li>
             </ul>
-          </address>
-
+            <address>
+              <ul class="contacts">
+                <li><a target="_blank" href="tel:+380684439426">+380 (68) 443-94-26</a></li>
+                <li><a target="_blank" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x8752f35bbcfb1369:0x260ab4842496c9e4?sa=X&ved=2ahUKEwiSp6P4i-iEAxUkSfEDHTDLBTYQ4kB6BAgOEAA">1678 S. Pioneer Road Salt<br> Lake City UT 84104</a></li>
+              </ul>
+            </address>
+          </div>
+          <div class="rights">
+            <p class="privacy-policy">Privacy Policy / Cookie settings</p>
+            <p class="green-harvest">©Green Harvest 2023</p>
+          </div>
         </div>
       </footer>
 
